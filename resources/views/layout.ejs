@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizzlo:Food Delivery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="container mx-auto flex items-center justify-between pt-2.5 pl-3">
+        <div class="flex items-center">
+            <img src="/img/logo.png" alt="logo" class="w-1/6 h-1/6">
+            <span class="text-2xl font-bold">Sizzlo</span>
+        </div>
+        <div class="pr-10">
+            <ul class="flex items-center">
+                <li class="ml-6 hover:text-red-500 delay-100"><a href="/">Home</a></li>
+                <li class="ml-6 hover:text-red-500 delay-100"><a href="/menu">Menu</a></li>
+                <li class="ml-6 hover:text-red-500 delay-100"><a href="/cart">My Order</a></li>
+                <li class="ml-6 hover:text-red-500 delay-100"><a href="/menu" class="inline-block px-4 py-2 rounded-full flex item-center text-white bg-red-500 hover:bg-red-600 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2">
+                <span class="cartCounter text-white font-bold pr-2"><%= session.cart? session.cart.totalQty: ' ' %></span>
+                <img src="/img/cart.png"alt="">
+                </a></li>
+                <li class="ml-6 hover:text-red-500 delay-100"><a href="/login">Login</a></li>
+                <li class="ml-6 hover:text-red-500 delay-100"><a href="/register" class="text-white bg-red-500 hover:bg-red-600 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2">Sign up</a></li>
+            </ul>
+        </div>
+    </nav>
+    <%- body%>
+    <script src="/js/app.js"></script>
+</body>
+</html>

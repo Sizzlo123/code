@@ -1,0 +1,34 @@
+@import './variables.scss';
+@import '~noty/src/noty.scss';
+@import '~noty/src/themes/mint.scss';
+body{
+    font-family: 'Lato',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    color: $dark;
+}
+
+// body{
+//     background: navajowhite;
+//     background-size: cover;
+//     font-family: 'Trebuchet MS', sans-serif; 
+//   }
+
+.hero-container{
+    height: 30rem;
+}  
+// .container{
+//     display: inline-block;
+//   }
+//   .typed-out{
+//     overflow: hidden;
+//     border-right: .15em solid orange;   
+//     white-space: nowrap;
+//     animation: 
+//       typing 15s forwards;
+//     font-size: 1.6rem;
+//     width: 0;
+//   }
+//   @keyframes typing {
+//     from { width: 0 }
+//     to { width: 50% }
+//   }

@@ -1,0 +1,48 @@
+<section class="cart bg-gray-100 py-16">
+
+    <% if(session.cart) { %>
+     <div class="order container mx-auto w-1/2">
+         <div class="flex items-center border-b border-gray-300 pb-4">
+            <img src="/img/cart-black.png" alt="cart">
+            <h1 class="font-bold ml-4 text-2xl">Order Summary</h1>
+         </div>
+        <% for(let menu of Object.values(session.cart.items)) { %>
+         <div class="menu-list">
+            <div class="flex items-center my-8">
+                <img src="/img/<%= menu.items.image %>" alt="" class="w-24 pr-4">
+                <div class="flex-1 ">
+                    <h1><%= menu.items.name %></h1>
+                    <span><%= menu.items.size%></span>
+                </div>
+                <span class="flex-1"><%= menu.qty %></span>
+                <span class="font-bold text-lg">₹ <%= menu.items.price * menu.qty %></span>
+            </div>
+
+            <% } %>
+         <hr>
+         <div class="text-right py-4">
+            <span class="font-bold text-lg">Total Amount:</span>
+            <span class="text-red-500 text-2xl font-vold">₹ <%= session.cart.totalPrice %></span>
+         </div>
+         <div class="text-right py-4">
+             <a href="" class="text-white bg-red-500 hover:bg-red-600 font-medium rounded-full text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 ">Order Now</a>
+            <a href="" class="text-white bg-red-500 hover:bg-red-600 font-medium rounded-full text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2 ">Login to continue</a>
+         </div>
+        </div>
+        <% }else { %>
+    <div class="empty-cart py-8">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold mb-2">Cart Empty 😒</h1>
+            <p class="text-gray-400">You Probably haven't orderd yet.
+                <br>
+                For order,go to the main page.
+            </p>
+            <img src="/img/empty-cart.png" alt="empty-cart" class="w-2/5 mx-auto mt-4">
+            <div class="mt-8">
+            <a href="/" class="text-white bg-red-500 hover:bg-red-600 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2">Go Back</a>
+            </div>
+        </div>
+    </div>
+    <% } %>
+    </section>
+    

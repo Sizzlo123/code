@@ -1,0 +1,24 @@
+<div class="flex overflow-x-hidden justify-center flex-wrap">
+    <%menuItems.forEach(function(menuItems){%>
+        <div class=" bg-gray-100 rounded-xl drop-shadow-2xl ml-6 mt-6 mb-6 mr-6 hover:-translate-y-1 hover:scale-110 w-1/5 ">
+            <div class="flex justify-center">
+                <img class="p-8 rounded-t-lg w-4/6" src="/img/<%=menuItems.image%>" alt="">
+            </div>
+            <div class="px-5 pb-5">
+                <a href="#">
+                    <!-- <h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5> -->
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900"><%=menuItems.name%></h5>
+
+                </a>
+                <div class="flex justify-between items-center pt-4">
+                    <span class="text-3xl font-bold text-gray-900"><%=menuItems.price%></span>
+                    <a href="#" data-menu="<%= JSON.stringify(menuItems)%>" 
+                        class="add-to-cart text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Add to cart</a>
+                </div>
+            </div>
+        </div>
+    <%})%>
+
+</div>
+
+
