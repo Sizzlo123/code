@@ -1,65 +1,193 @@
-[{
-  "_id": {
-    "$oid": "5eee651f739f8c674fd736ee"
-  },
-  "name": "Margherita",
-  "image": "pizza.png",
-  "price": "250",
-  "size": "small"
-},{
-  "_id": {
-    "$oid": "5eee6671a27a66807cf2bea3"
-  },
-  "name": "Marinara",
-  "image": "pizza.png",
-  "price": "300",
-  "size": "medium"
-},{
-  "_id": {
-    "$oid": "5eee6692a27a66807cf2bea4"
-  },
-  "name": "Carbonara",
-  "image": "pizza.png",
-  "price": "200",
-  "size": "small"
-},{
-  "_id": {
-    "$oid": "5eee66a5a27a66807cf2bea5"
-  },
-  "name": "Americana",
-  "image": "pizza.png",
-  "price": "500",
-  "size": "large"
-},{
-  "_id": {
-    "$oid": "5eee66c4a27a66807cf2bea6"
-  },
-  "name": "Chicken Mushroom",
-  "image": "pizza.png",
-  "price": "350",
-  "size": "medium"
-},{
-  "_id": {
-    "$oid": "5eee66cfa27a66807cf2bea7"
-  },
-  "name": "Paneer pizza",
-  "image": "pizza.png",
-  "price": "200",
-  "size": "small"
-},{
-  "_id": {
-    "$oid": "5eee66eea27a66807cf2bea8"
-  },
-  "name": "Vegies pizza",
-  "image": "pizza.png",
-  "price": "600",
-  "size": "large"
-},{
-  "_id": {
-    "$oid": "5eee6717a27a66807cf2bea9"
-  },
-  "name": "Pepperoni",
-  "image": "pizza.png",
-  "price": "500",
-  "size": "medium"
-}]
+[
+    {
+        "_id": {
+          "$oid": "5eee66c4a27a66807cd2bea6"
+        },
+        "name": "Rajma Chawal",
+        "image": "rajma.png",
+        "price": "100",
+        "description": "It tastes lipsmacking when served hot with steamed rice and now it has turned out to be one of the most favorite comfort foods at our home too. We know Rajma is rich in iron and protein and when it combines with rice, it makes a great source of carbohydrates."
+    },
+    {
+        "_id": {
+          "$oid": "5eee66c4a27a66807cf2bea8"
+        },
+        "name": "Chole Chawal",
+        "image": "chole.png",
+        "price": "100",
+        "description": "One of the most demanding dishes of North India, chole chawal is a staple dish for all the food lovers out there! Due to their nutritional value, chole or chickpeas are a popular food item among all vegans. Our masala chole is cooked in a tangy paste of ginger, tomato, onion with herbs and spices that gives it a Desi Punjabi Tadka."
+      },
+      {
+        "_id": {
+          "$oid": "5eee66c4a27a66807cf2bea9"
+        },
+        "name": "Laccha Paratha",
+        "image": "laccha.png",
+        "price": "100",
+        "description": "This flaky crispy paratha variant is also called as Lachedar paratha or Paratwala paratha.The specialty and uniqueness of this paratha are the various visible flaky and crispy layers that are also soft and tender. Making these traditional Indian layered flatbreads is easy and great to mop up with any curry or gravy dish.The slight peppery taste and vibrant colour of the paratha makes everyone crave for it"
+    },
+    {
+        "_id": {
+          "$oid": "5eee66c4a27a66807ct2bea10"
+        },
+        "name": "Chole Bhature",
+        "image": "bhature.png",
+        "price": "80",
+        "description": "It is a combination of chana masala (spicy white chickpeas) and bhatura. Chole Bhature is one of the mouth-watering, spicy, exotic dish from Punjabi Cuisine. The crispy puffed Bhatura makes an excellent combo with hot & spicy Chole / Chickpeas curry."
+      },
+      {
+        "_id": {
+          "$oid": "5eee66c4a27a66807de2bea11"
+        },
+        "name": "Stuffed Paratha",
+        "image": "stuff.png",
+        "price": "100",
+        "description": "Parathas are one of the most popular unleavened flatbreads in the Indian subcontinent, made by baking or cooking whole-wheat dough on a tava,when stuffed with aloo/onion is what you should be eating if you want something healthy, tasty and fulfilling. One can barely finish one of these at a time."
+      },
+      {
+        "_id": {
+          "$oid": "5eee66c4a27a66807df2bea12"
+        },
+        "name": "Chole Kulche",
+        "image": "kulche.png",
+        "price": "90",
+        "size": "One of the best Indian snacks cum breakfast options out there is Chole kulche!A delicious combination of an all-purpose flour bread tossed in butter along with tangy and spicy chole. It is made with white peas and mixed with simple spices like red chilli powder, salt and chaat masala and topped with some chaat masala gives it all that scrumptious flavour."
+      },
+      {
+        "_id": {
+          "$oid": "5eev66c4a27a66807cp2bea55"
+        },
+        "name": "Maggi",
+        "image": "maggi.png",
+        "price": "80",
+        "description": "Endless love for Maggi!Raise your hands if you feel that Maggi is not just a food item, but life.Rush right away and order your favourite Maggi."
+      },
+      {
+        "_id": {
+          "$oid": "5ede66c4a27a66807cf2bea13"
+        },
+        "name": "Aloo Samosa",
+        "image": "samosa.png",
+        "price": "30",
+        "description": "Samosas are great because of the combination of the crispy outside, which forms during frying, and the flavourful filling on the inside. An all time favourite snack with green and imly chutney."
+
+      },
+      {
+        "_id": {
+          "$oid": "5pee66c4a27a66807cf2bea14"
+        },
+        "name": "Chowmein Samosa",
+        "image": "csamosa.png",
+        "price": "50",
+        "description": "The Classic Samosa Gets An Indo-Chinese Twist.This chowmein samosa is the best solution for your craving."
+      },
+      {
+        "_id": {
+          "$oid": "5eee66c4a27a66807cf2bea15"
+        },
+        "name": "Veg Patty",
+        "image": "patty.png",
+        "price": "50",
+        "description": "A snack with crisp and flanky outer layer outer layer and mixed vegetable stuffing is a quick and tasty way of satisfying urge of something savory."
+      },
+      {
+        "_id": {
+          "$oid": "5eee66c4a27a66807cf2bea16"
+        },
+        "name": "Cheese/Veg Sandwich",
+        "image": "sandwich.png",
+        "price": "60",
+        "description": "Your satisfaction is what we care for . Your hunger is what we strive to eradicate."
+      },
+      {
+        "_id": {
+          "$oid": "5eee66c4a27a66807cf2bea17"
+        },
+        "name": "Veg Burger",
+        "image": "burger.png",
+        "price": "50",
+        "description": "Buns with Aloo tikki loaded with veggies and cheese. when life throws you a burger, eat it."
+      },
+      {
+        "_id": {
+          "$oid": "5eee66c4a27a66807cf2bea26"
+        },
+        "name": "Bread Pakora",
+        "image": "bread.png",
+        "price": "50",
+        "size": "Bread Pakora is a much loved snack of deep fried and savory bread fritters from the North Indian Cuisine, especially Punjabi Cuisine."
+      },
+      {
+        "_id": {
+          "$oid": "5eee66c4a27a66807cf2bea18"
+        },
+        "name": "Virgin Mojito",
+        "image": "mojito.png",
+        "price": "90",
+        "description": "The virgin Mojito is a basically non-alcoholic drink. It is made by Lemon, Soda and Mint Leaves. It is also Called Mocktail .If life gives you lemon, make mojito out of it."
+      },
+      {
+        "_id": {
+          "$oid": "5eee66c4a27a66807cf2bea19"
+        },
+        "name": "Cold Coffee",
+        "image": "coffee.png",
+        "price": "80",
+        "size": "Have you had your coffee yet? If you did, then hooray to you! You’re now ready for the next step! "
+      },
+        {
+          "_id": {
+            "$oid": "5eee66c4a27a66807cf2bea20"
+          },
+          "name": "Tea",
+          "image": "tea.png",
+          "price": "40",
+          "size": "A cup of tea is a solution for everything. A hug in a cup."
+        },
+        {
+          "_id": {
+            "$oid": "5eee66c4a27a66807cf2bea21"
+          },
+          "name": "Soup",
+          "image": "soup.png",
+          "price": "90",
+          "description": "Soup puts the heart at ease, calms down the violence of hunger, eliminates the tension of the day, and awakens and refines the appetite."
+        },
+        {
+          "_id": {
+            "$oid": "5eee66c4a27a66807cf2bea22"
+          },
+          "name": "Lassi",
+          "image": "lassi.png",
+          "price": "80",
+          "description": "Life is better with a sweet or salted lassi in your hand."
+        },
+        {
+          "_id": {
+            "$oid": "5eee66c4a27a66807cf2bea23"
+          },
+          "name": "Soft Drinks",
+          "image": "soft.png",
+          "price": "50",
+          "description": "Life is better with a cold drink. Better quenched than sorry. Sip, sip, hooray"
+        },
+        {
+          "_id": {
+            "$oid": "5eee66c4a27a66807cf2bea24"
+          },
+          "name": "Blue Berry Soda",
+          "image": "bluesoda.png",
+          "price": "90",
+          "description": "This Blueberry Soda soothes your body and mind with a lingering taste of Blueberry. The drink is rejuvenating and healthy. "
+        },
+        {
+          "_id": {
+            "$oid": "5eee66c4a27a66807cf2bea25"
+          },
+          "name": "Shikanji/Lemonade",
+          "image": "lemon.png",
+          "price": "90",
+          "size": "Lemon soda is a blend of lemon juice with icecubes, salt, sugar and chilled soda. It is a carbonated soft drink made with lemon juice. This is a refreshing drink to quench your thirst. Lemon soda is instant and quick to make, helps in digestion too."
+        }
+        
+]

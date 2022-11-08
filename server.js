@@ -10,10 +10,12 @@ const mongoose=require('mongoose')
 const session=require('express-session')
 const flash=require('express-flash')
 const MongodbStore=require('connect-mongo')
+const passport=require('passport')
 const { env } = require('process');
 const { minify } = require('laravel-mix');
 const { connect } = require('http2');
 const PORT=process.env.PORT || 3000
+
 //database connection
 const url='mongodb://localhost/Sizzlo';
 
@@ -26,6 +28,7 @@ connection.once('open',()=>{
 }) .on('error', function (err) {
     console.log('connection failed...');
 });
+
 
 
 
@@ -43,7 +46,8 @@ app.use(session({
     store: store,
     saveUninitialized: false,
     cookie: { maxAge: 1000 * 60 * 60 * 24 }, // 24 hours
-  }));
+}));
+
 
 app.use(flash())
 app.use(express.json()) 
@@ -54,6 +58,8 @@ app.use((req,res,next)=>{
     res.locals.session=req.session
     next()
 })
+
+
 
 app.use(express.static(__dirname));
 app.use(express.urlencoded({extended: false}))
@@ -68,6 +74,19 @@ app.listen(PORT,()=> {
     console.log(`Listening on port ${PORT}`)
 })
 
+//passport config
+const passportInit= require('./app/config/passport');
+// const user = require('./app/models/user');
+// const { use } = require('passport');
+// passportInit(
+//     passport,
+//     email=> user.find(user=>user.email === email) ,
+//     id=> user.find(user=> user.id === id)
+// )
+
+passportInit(passport)
+app.use(passport.initialize())
+app.use(passport.session())
 
 // app.get("/login", (req, res) => {
 //     console.log(__dirname)

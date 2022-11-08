@@ -1,24 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizzlo:Food Delivery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="container mx-auto flex items-center justify-between pt-2.5 pl-3">
+        <div class="flex items-center">
+            <img src="/img/logo.png" alt="logo" class="w-1/6 h-1/6">
+            <span class="text-2xl font-bold">Sizzlo</span>
+        </div>
+        <div class="pr-10">
+            <ul class="flex items-center">
+                <li class="ml-6 hover:text-red-500 delay-100"><a href="/">Home</a></li>
+                <li class="ml-6 hover:text-red-500 delay-100"><a href="/menu">Menu</a></li>
+                <li class="ml-6 hover:text-red-500 delay-100"><a href="/cart">My Order</a></li>
+                <li class="ml-6 hover:text-red-500 delay-100"><a href="/menu" class="inline-block px-4 py-2 rounded-full flex item-center text-white bg-red-500 hover:bg-red-600 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2">
+                <span class="cartCounter text-white font-bold pr-2"><%= session.cart? session.cart.totalQty: ' ' %></span>
+                <img src="/img/cart.png"alt="">
+                </a></li>
+                <li class="ml-6 hover:text-red-500 delay-100"><a href="/login">Login</a></li>
+                <li class="ml-6 hover:text-red-500 delay-100"><a href="/register" class="text-white bg-red-500 hover:bg-red-600 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 mr-1 md:mr-2">Sign up</a></li>
+            </ul>
+        </div>
+    </nav>
+
 <div class="flex overflow-x-hidden justify-center flex-wrap">
     <%menuItems.forEach(function(menuItems){%>
-        <div class=" bg-gray-100 rounded-xl drop-shadow-2xl ml-6 mt-6 mb-6 mr-6 hover:-translate-y-1 hover:scale-110 w-1/5 ">
+        <div class=" bg-gray-100 rounded-xl drop-shadow-2xl ml-6 mt-6 mb-6 mr-6 hover:-translate-y-1 hover:scale-110 w-1/5 hover:ounded-t-md ">
             <div class="flex justify-center">
-                <img class="p-8 rounded-t-lg w-4/6" src="/img/<%=menuItems.image%>" alt="">
+                <img class="max-h-48 min-w-full rounded-t-md" src="/img/<%=menuItems.image%>" alt="">
             </div>
             <div class="px-5 pb-5">
                 <a href="#">
-                    <!-- <h5 class="text-xl font-semibold tracking-tight text-gray-900">Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport</h5> -->
-                    <h5 class="text-xl font-semibold tracking-tight text-gray-900"><%=menuItems.name%></h5>
-
+                    <h5 class="text-xl font-semibold tracking-tight text-gray-900 py-4"><%=menuItems.name%></h5>
                 </a>
+                <p class="text-sm"><%=menuItems.description%></p>
                 <div class="flex justify-between items-center pt-4">
-                    <span class="text-3xl font-bold text-gray-900"><%=menuItems.price%></span>
+                    <span class="text-3xl font-bold text-gray-900">₹<%=menuItems.price%></span>
                     <a href="#" data-menu="<%= JSON.stringify(menuItems)%>" 
                         class="add-to-cart text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Add to cart</a>
                 </div>
             </div>
         </div>
     <%})%>
+    <!-- <body class="antialiased bg-gray-200 text-gray-900 font-sans p-6">
+        <div class="container mx-auto">
+          <div class="flex flex-wrap -mx-4">
+            <div class="w-full sm:w-1/2 md:w-1/2 xl:w-1/4 p-4">
+              <a href="" class="c-card block bg-white shadow-md hover:shadow-xl rounded-lg overflow-hidden">
+              <div class="relative pb-48 overflow-hidden">
+                <img class="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="">
+              </div>
+              <div class="p-4">
+                <span class="inline-block px-2 py-1 leading-none bg-orange-200 text-orange-800 rounded-full font-semibold uppercase tracking-wide text-xs">Highlight</span>
+                <h2 class="mt-2 mb-2  font-bold">Purus Ullamcorper Inceptos Nibh</h2>
+                <p class="text-sm">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <div class="mt-3 flex items-center">
+                  <span class="text-sm font-semibold">ab</span>&nbsp;<span class="font-bold text-xl">45,00</span>&nbsp;<span class="text-sm font-semibold">€</span>
+                </div>
+                <a href="#" data-menu="<%= JSON.stringify(menuItems)%>" 
+                    class="add-to-cart text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Add to cart</a>
+              </div>
+            </a>
+      </body> -->
 
 </div>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
 
 
